@@ -22,3 +22,23 @@ Add following code to build.gradle
   	dependencies {
 	        implementation 'com.github.OmkarKadam1:Listing:1.4'
 	}
+
+
+How to use in Activity or Fragment
+
+ 	button.setOnClickListener(View.OnClickListener {
+            var ww=  apiResponse.getListingResponse(URL)
+
+            apiResponse.apiResponse=object:ListingResponse.Companion.onApiResponse{
+                override fun onSucess(assetResponse: AssetResponse?) {
+
+                  
+                }
+
+                override fun onError(error: String?) {
+                   
+                }
+
+            }
+
+        })
