@@ -26,22 +26,19 @@ Add following code to build.gradle
 
 How to use in Activity or Fragment
 
-	var apiResponse=ListingResponse.Companion
-	
-	
- 	button.setOnClickListener(View.OnClickListener {
-            var ww=  apiResponse.getListingResponse(URL)
+	button.setOnClickListener(View.OnClickListener {
+            ListingResponse.getListingResponse(URL,object :ListingResponse.Companion.onApiResponse{
+                 override fun onSucess(assetResponse: AssetResponse?) {
+                     var aa=assetResponse?.content?.items?.get(0)?.secondaryEntityName
+                     text.text=aa
+                 }
 
-            apiResponse.apiResponse=object:ListingResponse.Companion.onApiResponse{
-                override fun onSucess(assetResponse: AssetResponse?) {
+                 override fun onError(error: String?) {
+                     text.text=error
+                 }
 
-                  
-                }
+             })
 
-                override fun onError(error: String?) {
-                   
-                }
-
-            }
 
         })
+
