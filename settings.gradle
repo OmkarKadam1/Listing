@@ -1,0 +1,2 @@
+include ':app', ':silistings'
+rootProject.name='SI Listing'
