@@ -14,5 +14,5 @@ allprojects {
   Then add the dependency to build.gradle
   
   	dependencies {
-	        implementation 'com.github.OmkarKadam1:Listing:Tag'
+	        implementation 'com.github.OmkarKadam1:Listing:1.4'
 	}
