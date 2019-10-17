@@ -26,6 +26,9 @@ Add following code to build.gradle
 
 How to use in Activity or Fragment
 
+	var apiResponse=ListingResponse.Companion
+	
+	
  	button.setOnClickListener(View.OnClickListener {
             var ww=  apiResponse.getListingResponse(URL)
 
