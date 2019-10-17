@@ -1,4 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.si.listings"
-    tools:replace="android:appComponentFactory" />
+    package="com.si.listings">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:supportsRtl="true"
+        tools:replace="android:appComponentFactory">
+    </application>
+
+</manifest>
+
