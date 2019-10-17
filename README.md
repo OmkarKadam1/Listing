@@ -29,12 +29,11 @@ How to use in Activity or Fragment
 	button.setOnClickListener(View.OnClickListener {
             ListingResponse.getListingResponse(URL,object :ListingResponse.Companion.onApiResponse{
                  override fun onSucess(assetResponse: AssetResponse?) {
-                     var aa=assetResponse?.content?.items?.get(0)?.secondaryEntityName
-                     text.text=aa
+		 
                  }
 
                  override fun onError(error: String?) {
-                     text.text=error
+                     
                  }
 
              })
